@@ -66,6 +66,41 @@ The app calls `load_dotenv()` so environment variables from `.env` are picked up
 
 ---
 
+## Run with Docker
+
+You can use the published image to run the API without installing Python locally.
+
+Windows cmd example (omit secrets; use placeholders or an env file):
+
+```bat
+docker run -p 8000:8000 ^
+  -e OPENAI_API_KEY=YOUR_OPENAI_API_KEY ^
+  -e OPENAI_MODEL=gpt-4o-mini ^
+  -it docker.io/talhalaf/moonactive-home-assignment:latest
+```
+
+Optionally load variables from a local `.env` file instead of inlining keys:
+
+```bat
+docker run -p 8000:8000 ^
+  --env-file .env ^
+  -it docker.io/talhalaf/moonactive-home-assignment:latest
+```
+
+Open an interactive shell in the container (useful for debugging):
+
+```bat
+docker run -p 8000:8000 ^
+  --entrypoint sh ^
+  -it docker.io/talhalaf/moonactive-home-assignment:latest
+```
+
+Notes:
+- The image’s entrypoint starts the FastAPI server on port 8000.
+- Avoid committing or pasting real API keys in public places; prefer `--env-file`.
+
+---
+
 ## Run the API server
 
 ```bat
