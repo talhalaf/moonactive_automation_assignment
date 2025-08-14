@@ -1,5 +1,7 @@
 # Configuration Validator with AI Review (Moon Active assignment)
 
+![Architecture graph](graph.png)
+
 A small Python service that validates a game level configuration with two stages:
 - Schema validation using Pydantic (fast, deterministic)
 - AI review using an LLM (OpenAI by default) guided by editable difficulty heuristics (YAML)
