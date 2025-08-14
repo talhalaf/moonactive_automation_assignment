@@ -2,6 +2,8 @@
 
 ![Architecture graph](graph.png)
 
+![Demo](demo.gif)
+
 A small Python service that validates a game level configuration with two stages:
 - Schema validation using Pydantic (fast, deterministic)
 - AI review using an LLM (OpenAI by default) guided by editable difficulty heuristics (YAML)
