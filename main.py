@@ -1,3 +1,9 @@
+"""
+TEST-ONLY: This script is intended for local/tests usage only and should not be used in production flows.
+"""
+
+TEST_ONLY = True  # Marker for tooling and reviewers that this module is test-only
+
 from dotenv import load_dotenv
 
 from graph.models import LevelConfig
