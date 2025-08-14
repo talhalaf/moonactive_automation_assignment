@@ -1,0 +1,20 @@
+# Core framework
+langgraph
+
+# Data validation
+pydantic>=2
+
+# LangChain packages used
+langchain-core
+langchain-openai
+langchain-anthropic
+
+# YAML config loader
+PyYAML
+
+# Env file support
+python-dotenv
+
+# API server
+fastapi
+uvicorn

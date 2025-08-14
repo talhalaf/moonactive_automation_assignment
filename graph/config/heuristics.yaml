@@ -1,0 +1,16 @@
+version: 1
+# Game difficulty heuristics for balance checks
+# You can tweak reward and time per difficulty without code changes.
+difficulties:
+  easy:
+    reward: [100, 500]
+    time: { min: 30, max: null }
+  medium:
+    reward: [500, 2000]
+    time: { min: 20, max: 60 }
+  hard:
+    reward: [2000, 5000]
+    time: { min: 10, max: 30 }
+  # ultra-hard:
+  #   reward: [5000, 10000]
+  #   time: { min: 5, max: 15 }
