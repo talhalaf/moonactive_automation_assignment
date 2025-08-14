@@ -56,6 +56,7 @@ Create a file named `.env` in the project root with your key(s):
 ```
 # OpenAI (default path in code)
 OPENAI_API_KEY=sk-...
+OPENAI_MODEL=gpt-4o-mini
 
 # Optional: Uncomment the Anthropic client in graph/chains/llm_review.py to use this
 # ANTHROPIC_API_KEY=... 
@@ -138,8 +139,7 @@ These guidelines are embedded into the LLM prompt. Tweak ranges/times here witho
 
 ## Switching LLM providers/models
 - Default: OpenAI `gpt-4o-mini` (see `graph/chains/llm_review.py`)
-- To change the model, edit:
-  - `llm = ChatOpenAI(model="gpt-4o-mini")`
+- To change the model set env var `OPENAI_MODEL` (e.g., `gpt-4o`, `gpt-4o-mini`, `gpt-4.1-mini`) in your `.env`.
 - To try Anthropic:
   - Uncomment the `ChatAnthropic` block in `graph/chains/llm_review.py`
   - Set `ANTHROPIC_API_KEY` in `.env`

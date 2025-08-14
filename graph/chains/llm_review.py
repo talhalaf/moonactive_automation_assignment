@@ -4,9 +4,13 @@ from langchain_anthropic import ChatAnthropic
 
 from graph.models import LLMFeedback
 from pathlib import Path
+import os
+
+# Allow configuring the OpenAI model via env var, fallback to a sensible default
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 
 llm = ChatOpenAI(
-    model="gpt-4o-mini"
+    model=OPENAI_MODEL
 )
 
 # llm = ChatAnthropic(
