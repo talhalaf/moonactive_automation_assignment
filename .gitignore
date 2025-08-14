@@ -1,2 +1,103 @@
+############################
+# Python
+############################
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+downloads/
+wheels/
+share/python-wheels/
+*.egg-info/
+.eggs/
+*.egg
+MANIFEST
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.coverage*
+coverage.xml
+htmlcov/
+.pytest_cache/
+.hypothesis/
+
+# Type checkers / linters
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.pylint.d/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+__pypackages__/
+
+# PyInstaller
+*.spec
+*.manifest
+
+# Jupyter
+.ipynb_checkpoints/
+
+############################
 # Environment files
+############################
+# Keep example templates, ignore real secrets
 .env
+.env.local
+.env.*
+!.env.example
+!.env*.example
+.envrc
+
+############################
+# Editors / IDE
+############################
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+############################
+# OS junk
+############################
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+############################
+# Logs & temp
+############################
+*.log
+logs/
+*.tmp
+*.temp
+*.swp
+*.swo
+~*
+
+############################
+# Docker (local)
+############################
+.docker/
+.dockerignore.local
